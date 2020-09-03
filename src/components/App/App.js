@@ -20,6 +20,7 @@ import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import SecretsPage from '../SecretsPage/SecretsPage';
+import Users from '../Users/Users'
 
 import './App.css';
 
@@ -61,6 +62,13 @@ class App extends Component {
               exact
               path="/secrets"
               component={SecretsPage}
+            />
+
+<ProtectedRoute
+              // logged in shows SecretsPage else shows LoginPage
+              exact
+              path="/users"
+              component={Users}
             />
 
             {/* When a value is supplied for the authRedirect prop the user will
